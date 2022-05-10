@@ -110,7 +110,6 @@
 
             .w50{
                 width: 50%;
-                min-width: 500px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -139,7 +138,7 @@
                 padding: 50px;
                 border: 5px solid var(--corPrincipal);
                 margin-bottom: 10px;
-                height: 70vh;
+                max-height: 70vh;
             }
 
             #jogo .box-forca img{
@@ -185,6 +184,15 @@
                 color: white;
                 font-size: 18px;
                 border-radius: 5px;
+            }
+
+            @media screen and (max-width: 700px){
+                .w50{
+                    width: 90%;
+                }
+                #jogo .box-forca{
+                    padding: 10px;
+                }
             }
         </style>
     </head>
