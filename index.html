@@ -139,10 +139,13 @@
                 border: 5px solid var(--corPrincipal);
                 margin-bottom: 10px;
                 max-height: 70vh;
+                display: flex;
+                justify-content: center;
             }
 
             #jogo .box-forca img{
-                height: 100%;
+                width: 100%;
+                object-fit: contain;
             }
 
             #comemoracao{
@@ -186,12 +189,19 @@
                 border-radius: 5px;
             }
 
+            @media screen and (max-width: 1070px){
+                #jogo .box-forca{
+                    width:  90%;
+                }
+            }
+
             @media screen and (max-width: 700px){
                 .w50{
                     width: 90%;
                 }
                 #jogo .box-forca{
                     padding: 10px;
+                    height: 300px;
                 }
             }
         </style>
