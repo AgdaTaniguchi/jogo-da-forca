@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    outline: none;
+}
+
+:root{
+    --corPrincipal: #ff6e6c;
+    --corSecundaria: #67568c;
+}
+
+body{
+    background: #1f1235;
+    overflow-x: hidden;
+}
+
+main{
+    min-height: calc(100vh - 80px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+footer{
+    height: 80px;
+    background: var(--corPrincipal);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+footer p{
+    text-align: center;
+}
+
+footer p a{
+    color: white;
+}
+
+h1{
+    margin: 20px 0;
+    color: var(--corPrincipal);
+}
+
+.box-dica{
+    margin: 15px 0;
+    width: 100%;
+    font-size: 21px;
+    text-align: center;
+}
+
+.box-dica #questaoNumero{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+input{
+    background: var(--corSecundaria);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+    transition-duration: 0.3s;
+    padding: 5px;
+}
+
+input:hover, input:focus{
+    border: 3px solid var(--corPrincipal);
+    transition-duration: 0.3s;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0);
+    color: var(--corPrincipal);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 3px solid var(--corPrincipal);
+    font-size: 17px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+button:hover{
+    color: white;
+    background: var(--corPrincipal);
+    transition-duration: 0.3s;
+}
+
+.w50{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tela{
+    width: 50%;
+    display: block;
+}
+
+.tela p{
+    margin: 25px 0;
+    font-size: 20px;
+}
+
+#jogo{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#jogo .box-forca{
+    background: var(--corSecundaria);
+    border-radius: 5px;
+    padding: 50px;
+    border: 5px solid var(--corPrincipal);
+    margin-bottom: 10px;
+    max-height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+#jogo .box-forca img{
+    width: 100%;
+    object-fit: contain;
+}
+
+#comemoracao{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/comemoracao.png);
+    display: none;
+    animation: comemorar 2s forwards, mexerlado 0.5s infinite;
+}
+
+@keyframes comemorar{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+
+@keyframes mexerlado{
+    0%{
+        left: 30px;
+    }
+    50%{
+        left: -30px;
+    }
+    100%{
+        left: 30px;
+    }
+}
+
+#alerta{
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--corPrincipal);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1070px){
+    #jogo .box-forca{
+        width:  90%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .w50{
+        width: 90%;
+    }
+    #jogo .box-forca{
+        padding: 10px;
+        height: 300px;
+    }
+}
